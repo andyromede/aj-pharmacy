@@ -50,7 +50,7 @@ const Hero = () => {
 
           <h1 className="hero-title animate-fade-up delay-300">
             Your Friendly <br />
-            <span className="text-green">Webster</span> Neighborhood <br />
+            <span className="text-green">Neighborhood</span> <br />
             <span className="text-blue">Pharmacy</span>
           </h1>
 
