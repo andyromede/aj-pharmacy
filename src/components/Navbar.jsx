@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X, MapPin, Phone, Clock } from 'lucide-react';
 import logoMark from '../assets/A&J Pharmacy pic logo square no blue background no pharmacy.png';
 import logoText from '../assets/pharmacy blue name.png';
+import { handleMapClick } from '../utils/mapUtils';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -44,13 +45,13 @@ const Navbar = () => {
         <div className="container top-bar-inner">
           <div className="top-bar-item">
             <MapPin size={14} />
-            <a href="https://maps.apple.com/?address=1900+Empire+Blvd,+Webster,+NY+14580" target="_blank" rel="noreferrer" style={{ textDecoration: 'underline' }}>
+            <a href="#" onClick={handleMapClick} style={{ textDecoration: 'underline' }}>
               1900 Empire Blvd, Webster, NY 14580
             </a>
           </div>
           <div className="top-bar-item">
             <Phone size={14} />
-            <span>(585) 872-7575</span>
+            <a href="tel:+15858727575" style={{ textDecoration: 'underline' }}>(585) 872-7575</a>
           </div>
           <div className="top-bar-item">
             <div className={`status-dot ${isOpen ? 'open' : 'closed'}`}></div>

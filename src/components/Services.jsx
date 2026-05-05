@@ -22,17 +22,18 @@ const Services = () => {
       color: 'blue'
     },
     {
-      icon: <FlaskConical size={32} />,
-      title: 'Compounding Medication',
-      description: 'Custom compounding including Anal Hemorrhoid and Nifedipine 0.3% ointment.',
-      color: 'light-blue'
+      icon: <Pill size={32} />,
+      title: "Sildenafil/Tadalafil",
+      description: "As low as 90 tablets for $60. We can mail these anywhere in the US! Get discreet, affordable, and fast access to your ED medications.",
+      color: 'blue'
     },
     {
-      icon: <HeartPulse size={32} />,
-      title: 'Specialty ED Meds',
-      description: 'Sildenafil at low prices. Discreet mail for ED with absolutely no shipping costs.',
-      color: 'blue'
-    }
+      icon: <FlaskConical size={32} />,
+      title: 'Compounding Medication',
+      description: 'Custom compounding such as Nifedipine 0.3% ointment.',
+      color: 'light-blue'
+    },
+
   ];
 
   return (
@@ -46,8 +47,8 @@ const Services = () => {
 
         <div className="services-grid">
           {services.map((service, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className={`service-card animate-fade-up delay-${(index % 4) * 100}`}
             >
               <div className={`service-icon-wrapper color-${service.color}`}>

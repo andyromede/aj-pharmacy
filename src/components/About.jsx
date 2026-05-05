@@ -28,7 +28,7 @@ const About = () => {
             </h3>
             
             <p className="about-text">
-              Started in 2011 after recognizing failures of the big chain pharmacies, we focus on old-fashioned values. Previously working at Wegmans Pharmacy for 20 years, we bring a combined 35 years of experience to provide the best care.
+              Led by Owner and Pharmacist <strong>Sandra Le</strong> SP-Pph, A&J Pharmacy was started in 2011 after recognizing the failures of big chain pharmacies. With a focus on old-fashioned values and over 20 years of prior experience at Wegmans Pharmacy, Sandra and her team bring a combined 35 years of experience to provide you with the best care possible.
             </p>
             
             <ul className="about-list">
