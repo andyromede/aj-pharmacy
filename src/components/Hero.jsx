@@ -55,7 +55,7 @@ const Hero = () => {
           </h1>
 
           <p className="hero-subtitle animate-fade-up delay-400">
-            An immigrant minority women-owned business serving the Webster area for 15 years. Focusing on Mental Health, Elderly Patients, Specialty ED, and Niche Medical needs.
+            A minority women-owned business serving the Webster area for 15 years. Focusing on Mental Health, Elderly Patients, Specialty ED, and Niche Medical needs.
           </p>
 
           <div className="hero-cta animate-fade-up delay-400">
