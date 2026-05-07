@@ -34,7 +34,7 @@ const About = () => {
             <ul className="about-list">
               <li>
                 <CheckCircle className="text-green" size={20} />
-                <span>Minority Women-Owned Business</span>
+                <span>Minority Woman-Owned Business</span>
               </li>
               <li>
                 <CheckCircle className="text-green" size={20} />
