@@ -28,24 +28,16 @@ const Hero = () => {
             </p>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2rem' }}>
-            <div className="badge animate-fade-up delay-100" style={{ alignSelf: 'flex-start', marginBottom: '0' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginRight: '1rem' }}>
-                <MapPin size={16} />
-                <a href="#" onClick={handleMapClick} style={{ textDecoration: 'underline' }}>
-                </a>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <Phone size={16} />
-                <a href="tel:+15858727575" style={{ textDecoration: 'underline', color: 'inherit' }}>(585) 872-7575</a>
-              </div>
-            </div>
+          <div className="animate-fade-up delay-100" style={{ marginBottom: '2rem' }}>
+            <a href="tel:+15858727575" className="text-blue" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', fontSize: '2.25rem', fontWeight: 'bold', textDecoration: 'none' }}>
+              <Phone size={32} />
+              Call Us Now: (585) 872-7575
+            </a>
           </div>
 
           <h1 className="hero-title animate-fade-up delay-300">
-            Your Friendly <br />
-            <span className="text-green">Webster</span> Neighborhood <br />
-            <span className="text-blue">Pharmacy</span>
+            Care That Doesn't <br />
+            Keep You <span className="text-green">Waiting</span>
           </h1>
 
           <p className="hero-subtitle animate-fade-up delay-400">
