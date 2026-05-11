@@ -1,4 +1,5 @@
 import { CheckCircle } from 'lucide-react';
+import aboutImage from '../assets/IMG_0902.jpg';
 import './About.css';
 
 const About = () => {
@@ -8,13 +9,11 @@ const About = () => {
         <div className="about-grid">
           <div className="about-image-wrapper animate-fade-up">
             <div className="about-image-inner">
-              {/* Using a placeholder since we don't have an image, styled beautifully */}
-              <div className="image-placeholder">
+              <div className="image-placeholder" style={{ background: `url(${aboutImage}) center 15% / cover no-repeat` }}>
                 <div className="badge-overlay">
                   <span className="years">15</span>
                   <span className="text">Years in<br />Webster</span>
                 </div>
-                <div className="decorative-element"></div>
               </div>
             </div>
           </div>
@@ -28,7 +27,7 @@ const About = () => {
             </h3>
 
             <p className="about-text">
-              Led by Owner and Pharmacist <strong>Sandra Le</strong> SP-Pph, A&J Pharmacy was started in 2011 after recognizing the failures of big chain pharmacies. With a focus on old-fashioned values and over 20 years of prior experience at Wegmans Pharmacy, Sandra and her team bring a combined 35 years of experience to provide you with the best care possible.
+              Led by Owner and Pharmacist <strong>Sandra Le</strong> SP-Rph, A&J Pharmacy was started in 2011 after recognizing the failures of big chain pharmacies. With a focus on old-fashioned values and over 20 years of prior experience at Wegmans Pharmacy, Sandra and her team bring a combined 35 years of experience to provide you with the best care possible.
             </p>
 
             <ul className="about-list">

@@ -33,7 +33,6 @@ const Hero = () => {
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginRight: '1rem' }}>
                 <MapPin size={16} />
                 <a href="#" onClick={handleMapClick} style={{ textDecoration: 'underline' }}>
-                  1900 EMPIRE BLVD, WEBSTER, NY 14580
                 </a>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
@@ -41,16 +40,11 @@ const Hero = () => {
                 <a href="tel:+15858727575" style={{ textDecoration: 'underline', color: 'inherit' }}>(585) 872-7575</a>
               </div>
             </div>
-
-            <div className="badge animate-fade-up delay-200" style={{ alignSelf: 'flex-start', marginBottom: '0' }}>
-              <Truck size={16} />
-              <span>ROCHESTER RESIDENTS: FREE IN PERSON DELIVERY</span>
-            </div>
           </div>
 
           <h1 className="hero-title animate-fade-up delay-300">
             Your Friendly <br />
-            <span className="text-green">Neighborhood</span> <br />
+            <span className="text-green">Webster</span> Neighborhood <br />
             <span className="text-blue">Pharmacy</span>
           </h1>
 

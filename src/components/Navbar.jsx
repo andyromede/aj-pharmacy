@@ -12,15 +12,21 @@ const Navbar = () => {
   const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   const todayDate = new Date();
   const today = todayDate.getDay();
+  const currentHour = todayDate.getHours();
   const todayName = daysOfWeek[today];
-  let todayHours = `Open ${todayName}: 9 AM – 6 PM`;
-  let isOpen = true;
+  
+  let todayHours = '';
+  let isOpen = false;
   
   if (today === 0) {
     todayHours = `Closed ${todayName}`;
     isOpen = false;
   } else if (today === 6) {
     todayHours = `Open ${todayName}: 9 AM – 2 PM`;
+    isOpen = currentHour >= 9 && currentHour < 14;
+  } else {
+    todayHours = `Open ${todayName}: 9 AM – 6 PM`;
+    isOpen = currentHour >= 9 && currentHour < 18;
   }
 
   useEffect(() => {
