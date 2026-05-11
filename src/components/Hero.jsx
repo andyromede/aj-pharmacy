@@ -1,42 +1,49 @@
 import { ArrowRight, Truck, MapPin, Phone, Star, StarHalf } from 'lucide-react';
+import { useState, useEffect } from 'react';
 import { handleMapClick } from '../utils/mapUtils';
 import heroMapImage from '../assets/Screenshot 2026-05-05 at 2.10.41 AM.png';
 import './Hero.css';
 
+const heroImages = [
+  'https://images.unsplash.com/photo-1585435557343-3b092031a831?q=80&w=2070&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1576602976047-174e57a47881?q=80&w=2069&auto=format&fit=crop',
+  'https://images.unsplash.com/photo-1631549916768-4119b2e5f926?q=80&w=2079&auto=format&fit=crop'
+];
+
 const Hero = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section id="home" className="hero">
-      <div className="hero-bg">
-        <div className="hero-blob blob-1"></div>
-        <div className="hero-blob blob-2"></div>
+      <div className="hero-slideshow">
+        {heroImages.map((img, index) => (
+          <div 
+            key={index} 
+            className={`hero-slide ${index === currentImageIndex ? 'active' : ''}`}
+            style={{ backgroundImage: `url(${img})` }}
+          />
+        ))}
+        <div className="hero-slideshow-overlay"></div>
       </div>
 
-      <div className="container hero-content">
+      <div className="container hero-content" style={{ position: 'relative', zIndex: 2 }}>
         <div className="hero-text-wrapper">
-          <div className="review-badge animate-fade-up" style={{ marginBottom: '1.5rem', display: 'inline-flex', alignItems: 'center', gap: '0.75rem', background: 'white', padding: '0.5rem 1rem', borderRadius: '12px', boxShadow: 'var(--shadow-md)', border: '1px solid var(--border-color)' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.125rem', color: '#fbbf24' }}>
-              <span style={{ color: '#1f2937', fontWeight: '700', fontSize: '0.875rem', marginRight: '0.25rem' }}>4.3</span>
-              {[...Array(4)].map((_, i) => (
-                <Star key={i} size={14} fill="currentColor" />
-              ))}
-              <StarHalf size={14} fill="currentColor" />
-            </div>
-            <p style={{ margin: 0, fontSize: '0.875rem', color: 'var(--text-secondary)', fontWeight: '500' }}>
-              <a href="https://www.google.com/search?q=A%26J+Pharmacy+Webster+NY" target="_blank" rel="noreferrer" style={{ color: 'inherit' }}>
-                <span style={{ color: '#4285F4', fontWeight: '600' }}>19</span> Google reviews
-              </a>
-            </p>
-          </div>
-
           <div className="animate-fade-up delay-100" style={{ marginBottom: '2rem' }}>
             <a href="tel:+15858727575" className="text-blue" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', fontSize: '2.25rem', fontWeight: 'bold', textDecoration: 'none' }}>
               <Phone size={32} />
-              Call Us Now: (585) 872-7575
+              Call Us Now: <span style={{ textDecoration: 'underline' }}>(585) 872-7575</span>
             </a>
           </div>
 
           <h1 className="hero-title animate-fade-up delay-300">
-            Care That Doesn't <br />
+            <span className="text-green">Care</span> That Doesn't <br />
             Keep You <span className="text-green">Waiting</span>
           </h1>
 
@@ -57,11 +64,6 @@ const Hero = () => {
 
         <div className="hero-image-wrapper animate-fade-up delay-500" style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
           <div className="glass-card">
-            <div className="card-header">
-              <div className="dot red"></div>
-              <div className="dot yellow"></div>
-              <div className="dot green"></div>
-            </div>
             <div className="card-body">
               <div className="feature-item">
                 <div className="feature-icon bg-green">

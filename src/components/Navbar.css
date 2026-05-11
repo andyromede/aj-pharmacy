@@ -8,21 +8,26 @@
 .top-bar {
   background-color: var(--primary-blue);
   color: var(--white);
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   padding: 0.5rem 0;
-  display: none; /* Hidden on mobile */
-}
-
-@media (min-width: 768px) {
-  .top-bar {
-    display: block;
-  }
+  display: block;
 }
 
 .top-bar-inner {
   display: flex;
-  justify-content: flex-start;
-  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .top-bar {
+    font-size: 0.875rem;
+  }
+  .top-bar-inner {
+    justify-content: flex-start;
+    gap: 2rem;
+  }
 }
 
 .top-bar-item {
