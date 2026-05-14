@@ -1,4 +1,4 @@
-import { Pill, ShieldCheck, Truck, HeartPulse, FlaskConical, Network } from 'lucide-react';
+import { Pill, ShieldCheck, Truck, HeartPulse, FlaskConical, Network, Syringe } from 'lucide-react';
 import './Services.css';
 
 const Services = () => {
@@ -33,7 +33,12 @@ const Services = () => {
       description: 'Custom compounding such as Nifedipine 0.3% ointment.',
       color: 'light-blue'
     },
-
+    {
+      icon: <Syringe size={32} />,
+      title: 'Immunizations & Vaccines',
+      description: 'Stay protected with our quick and easy walk-in immunization services. Flu, COVID-19, Shingles, and more.',
+      color: 'green'
+    }
   ];
 
   return (

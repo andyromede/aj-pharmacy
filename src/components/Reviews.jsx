@@ -48,6 +48,25 @@ const Reviews = () => {
               "This pharmacy is the greatest place in the world !!! From helping my elderly parents to helping me. No lines. Lower costs than Wegmans and CVS. Help out the small businesses and stop going to these large places that have long lines and deep pockets. Get advice fast from people who care."
             </p>
           </div>
+
+          <div className="review-card animate-slide-in-left delay-300">
+            <div className="review-header">
+              <img src="https://ui-avatars.com/api/?name=Christy+Verplank&background=f472b6&color=fff&size=64" alt="Christy Verplank" className="review-avatar" />
+              <div className="review-meta">
+                <h4>Christy Verplank</h4>
+                <p className="review-subtitle">10 reviews</p>
+                <div className="review-stars" style={{ color: '#fbbf24', display: 'flex', gap: '0.125rem', marginTop: '0.25rem' }}>
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} size={16} fill="currentColor" />
+                  ))}
+                  <span className="review-date" style={{ color: 'var(--text-secondary)', fontSize: '0.875rem', marginLeft: '0.5rem' }}>4 years ago</span>
+                </div>
+              </div>
+            </div>
+            <p className="review-text">
+              "We've been using A&J for several years. The staff is friendly and they know our names. They care about our medication concerns and questions. Most everything we need is in stock and can be filled within a few hours (sometimes within 20 minutes when we ask)."
+            </p>
+          </div>
         </div>
       </div>
     </section>

@@ -4,18 +4,7 @@
   overflow: hidden;
 }
 
-.contact-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 400px;
-  height: 400px;
-  background-color: rgba(55, 167, 80, 0.05);
-  border-radius: 50%;
-  transform: translate(30%, -30%);
-  z-index: 0;
-}
+
 
 .contact-grid {
   display: grid;

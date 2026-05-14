@@ -12,7 +12,6 @@ function App() {
     <div className="app">
       <div className="app-bg">
         <div className="app-blob blob-1"></div>
-        <div className="app-blob blob-2"></div>
       </div>
       <Navbar />
       <main>

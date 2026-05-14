@@ -94,9 +94,14 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          <a href="#" onClick={handleMapClick} className="glass-card" style={{ display: 'block', padding: '0.5rem', borderRadius: '1.5rem', overflow: 'hidden' }}>
-            <img src={heroMapImage} alt="Map to A&J Pharmacy" style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '1rem' }} />
-          </a>
+          <div className="glass-card" style={{ padding: '0.5rem', borderRadius: '1.5rem', overflow: 'hidden', textAlign: 'center' }}>
+            <h3 style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic', fontWeight: '700', color: 'var(--primary-blue)', margin: '0.5rem 0 1rem 0', fontSize: '1.75rem', letterSpacing: '0.02em' }}>
+              in Baytowne Plaza!
+            </h3>
+            <a href="#" onClick={handleMapClick} style={{ display: 'block' }}>
+              <img src={heroMapImage} alt="Map to A&J Pharmacy" style={{ width: '100%', height: 'auto', display: 'block', borderRadius: '1rem' }} />
+            </a>
+          </div>
         </div>
       </div>
     </section>
